@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vertical Flex</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+  <style media="screen">
+
+  .blue {
+    background-color: blue;
+  }
+
+  .red {
+    background-color: red;
+
+  }
+
+  .yellow {
+    background-color: yellow;
+  }
+
+  .pink {
+    background-color: pink;
+
+  }
+
+  .green {
+    background-color: green;
+
+  }
+
+  .orange {
+    background-color: orange;
+
+  }
+
+  .purple {
+    background-color: purple;
+
+  }
+
+  .black {
+    background-color: black;
+
+  }
+
+  .silver {
+    background-color: silver;
+
+  }
+    .height1 {
+      height: 75px;
+    }
+
+    .height2 {
+
+      height: 600px;
+    }
+
+    .height3 {
+      height: 150px;
+    }
+
+    .flexSingleItem{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .flexSpaceAround{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+    }
+.flexVertSpaceAround{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+    ul li{
+      list-style: none;
+      text-transform: uppercase;
+
+    }
+
+    ul li a,ul li a:hover{
+      text-decoration: none;
+
+    }
+
+    .header{
+      line-height: 75px;
+    }
+.header2{
+  line-height: 150px;
+}
+
+  </style>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 height1 header">
+<ul class="flexSpaceAround">
+
+  <li> <a href="#">Navigation</a></li>
+  <li> <a href="#">Location</a></li>
+  <li> <a href="#">Tours</a></li>
+  <li> <a href="#">Contact Us</a></li>
+</ul>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-4 height2 blue flexVertSpaceAround">
+<img src="harry.jpg" alt="harry">
+<img src="harry.jpg" alt="harry">
+<img src="harry.jpg" alt="harry">
+      </div>
+      <div class="col-md-8 height2 green">
+
+        <div class="row">
+          <div class="col-md-6 height3 red flexSingleItem">
+            <div>
+              centered
+            </div>
+
+          </div>
+          <div class="col-md-6 height3 yellow flexSingleItem">
+            <div>
+
+            also centered
+            </div>
+
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-md-6 height3 pink">
+
+          </div>
+          <div class="col-md-6 height3 silver">
+
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-md-6 height3 black">
+
+          </div>
+          <div class="col-md-6 height3 purple">
+
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-md-6 height3 orange">
+
+          </div>
+          <div class="col-md-6 height3 yellow">
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-3 height1 blue">
+
+      </div>
+      <div class="col-md-3 height1 silver">
+
+      </div>
+      <div class="col-md-3 height1 purple">
+
+      </div>
+      <div class="col-md-3 height1 orange">
+
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-12 height3 red header2">
+        <ul class="flexSpaceAround">
+
+          <li> <a href="#">Twitter</a></li>
+          <li> <a href="#">Facebook</a></li>
+          <li> <a href="#">Instagram</a></li>
+          <li> <a href="#">Snapchat</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    //when the document is loaded
+    $(document).ready(function() {
+      //this function gets a random color between 0 and 255
+      function getRandomColor() {
+        return Math.floor(Math.random() * 255);
+      }
+      //get all the elements (divs) with the class .randomColor
+      var randomColor = $(".randomColor");
+
+      //loop through all elements
+      //for each element change the css background-color to RGB and three random colours
+      $.each(randomColor, function(index, item) {
+        $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+      })
+
+    })
+  </script>
+</body>
+
+</html>

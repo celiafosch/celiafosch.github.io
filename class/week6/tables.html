@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>One Direction Ranked</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+  <style media="screen">
+    .height1 {
+      height: 75px;
+    }
+
+    .height2 {
+      height: 600px;
+    }
+
+    body{
+      background-image: url("pink.jpg");
+      font-family: 'Lora', serif;
+    }
+    ul li{
+      list-style: none;
+      text-transform: uppercase;
+
+    }
+    ul li a,ul li a:hover{
+      text-decoration: none;
+      align-items: center;
+
+    }
+
+    .flexSingleItem{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      word-spacing: 40px;
+    }
+    h1{
+      text-align: center;
+
+    }
+    .pink{
+      background-color: pink;
+    }
+
+  .blue{
+    background-color: blue;
+  }
+
+  .purple{
+    background-color: purple;
+  }
+
+  </style>
+
+  <h1> One Direction Members Classed</h1>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 height1 flexSingleItem">
+
+<nav>
+  <ul>
+
+          <li>
+<a href="#">Home</a>
+<a href="#">Contact</a>
+<a href="#">Location</a>
+<a href="#">Manager</a>
+
+          </li>
+          </ul>
+
+
+</nav>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2 height2 pink">
+        <img src="zayn.jpg" alt="zayn" width="90px">
+        <img src="harry.jpg" alt="har" width="90px">
+        <img src="liam.jpg" alt="liam" width="90px">
+        <img src="lou.jpg" alt="lou" width="90px">
+        <img src="niel.jpg" alt="neil" width="90px">
+
+
+      </div>
+      <div class="col-md-8 height2">
+
+<table class="table table-striped table-hover">
+  <tr>
+      <th>Name of Member</th>
+    <th> Age</th>
+    <th>Attractiveness</th>
+    <th> Best Outfit </th>
+    <th> Hair Colour</th>
+    <th> Eye Colour </th>
+
+  </tr>
+<tr>
+    <td>Zayn Malik</td>
+  <td> 25</td>
+  <td> 10/10</td>
+  <td> Japan Era </td>
+  <td> Black</td>
+  <td> Brown </td>
+
+</tr>
+<tr>
+    <td>Liam Payne</td>
+  <td> 24</td>
+  <td> 9/10</td>
+  <td> 2009 Era </td>
+  <td>Brown</td>
+  <td> Brown</td>
+
+</tr>
+<tr>
+    <td>Harry Styles</td>
+  <td> 24</td>
+  <td> 10/10</td>
+  <td> Now Era </td>
+  <td>Brown</td>
+  <td> Green</td>
+
+</tr>
+<tr>
+    <td>Louis Tomlinson</td>
+  <td> 26</td>
+  <td> 7/10</td>
+  <td> Red Pants/White striped shirt </td>
+  <td>Brown</td>
+  <td> Brown</td>
+
+</tr>
+<tr>
+    <td>Niall Horan</td>
+  <td> 24</td>
+  <td> 9/10</td>
+  <td> Leprachaun </td>
+  <td>Blonde</td>
+  <td> Blue</td>
+
+</tr>
+
+
+</table>
+
+
+      </div>
+      <div class="col-md-2 height2 blue">
+<img src="ourmoment.jpg" alt="ad" width="120px">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 height1 purple">
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    //when the document is loaded
+    $(document).ready(function() {
+      //this function gets a random color between 0 and 255
+      function getRandomColor() {
+        return Math.floor(Math.random() * 255);
+      }
+      //get all the elements (divs) with the class .randomColor
+      var randomColor = $(".randomColor");
+
+      //loop through all elements
+      //for each element change the css background-color to RGB and three random colours
+      $.each(randomColor, function(index, item) {
+        $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+      })
+
+    })
+  </script>
+
+
+</body>
+
+</html>

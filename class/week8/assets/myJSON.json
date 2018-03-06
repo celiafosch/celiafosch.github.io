@@ -1,5 +1,5 @@
 [{
-    "Boyband Name": "One Direction",
+    "Name": "One Direction",
     "Members": "Zayn, Louis, Liam, Harry, Niall",
     "Best Album": "Four",
     "Best Song": "You and I",
@@ -8,7 +8,7 @@
 
   },
   {
-    "Boyband Name": "Backstreet Boys",
+    "Name": "Backstreet Boys",
     "Members": "Nick, Kevin, AJ, Brian, Howie",
     "Best Album": "Millennium",
     "Best Song": "Everybody",
@@ -17,7 +17,7 @@
 
   },
   {
-    "Boyband Name": "Big Time Rush",
+    "Name": "Big Time Rush",
     "Members": "Carlos, James, Kendall, Logan",
     "Best Album": "BTR",
     "Best Song": "Boyfriend",
@@ -26,7 +26,7 @@
 
   },
   {
-    "Boyband Name": "Jonas Brothers",
+    "Name": "Jonas Brothers",
     "Members": "Nick, Kevin, Joe",
     "Best Album": "A Little Bit Longer",
     "Best Song": "Burnin' Up",
@@ -35,7 +35,7 @@
 
   },
   {
-    "Boyband Name": "5 Seconds of Summer",
+    "Name": "5 Seconds of Summer",
     "Members": "Ashton, Luke, Calum, Michael",
     "Best Album": "5 Seconds of Summer",
     "Best Song": "She Looks So Perfect",

@@ -1,8 +1,8 @@
 [{
     "Name": "One Direction",
     "Members": "Zayn, Louis, Liam, Harry, Niall",
-    "Best Album": "Four",
-    "Best Song": "You and I",
+    "bestAlbum": "Four",
+    "bestSong": "You and I",
     "Colour": "Blue",
     "Fruit": "Banana"
 
@@ -10,8 +10,8 @@
   {
     "Name": "Backstreet Boys",
     "Members": "Nick, Kevin, AJ, Brian, Howie",
-    "Best Album": "Millennium",
-    "Best Song": "Everybody",
+    "bestAlbum": "Millennium",
+    "bestSong": "Everybody",
     "Colour": "Red",
     "Fruit": "Apple"
 
@@ -19,8 +19,8 @@
   {
     "Name": "Big Time Rush",
     "Members": "Carlos, James, Kendall, Logan",
-    "Best Album": "BTR",
-    "Best Song": "Boyfriend",
+    "bestAlbum": "BTR",
+    "bestSong": "Boyfriend",
     "Colour": "Yellow",
     "Fruit": "Kiwi"
 
@@ -28,8 +28,8 @@
   {
     "Name": "Jonas Brothers",
     "Members": "Nick, Kevin, Joe",
-    "Best Album": "A Little Bit Longer",
-    "Best Song": "Burnin' Up",
+    "bestAlbum": "A Little Bit Longer",
+    "bestSong": "Burnin' Up",
     "Colour": "Pink",
     "Fruit": "Pear"
 
@@ -37,8 +37,8 @@
   {
     "Name": "5 Seconds of Summer",
     "Members": "Ashton, Luke, Calum, Michael",
-    "Best Album": "5 Seconds of Summer",
-    "Best Song": "She Looks So Perfect",
+    "bestAlbum": "5 Seconds of Summer",
+    "bestSong": "She Looks So Perfect",
     "Colour": "Purple",
     "Fruit": "Grapes"
 

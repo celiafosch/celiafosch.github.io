@@ -29,6 +29,20 @@
         margin-right: auto;
         display: block;
       }
+      #nav-bar ul li{
+        list-style-type: none;
+        display: inline-block;
+        font-family: "Amatic SC";
+        font-size: 30px;
+        padding-right: 20px;
+      }
+      #nav-bar li{
+        margin: 15px;
+      }
+      #nav-bar ul{
+        text-align: center;
+      }
+
     </style>
   </head>
 <body>
@@ -37,16 +51,16 @@
   <h1> Celia's Diner Menu</h1>
 </header>
 
-<nav>
-  <ul id=" ">
-    <li><a href="#appetizers">Appetizers</a></li>
-    <li><a href="#soupsnsalads">Soups & Salads</a></li>
-    <li><a href="#mains">Mains</a></li>
-    <li><a href="#sides">Sides</a></li>
-    <li><a href="#beverages">Beverages</a></li>
-    <li><a href="#desserts">Desserts</a></li>
-  </ul>
-</nav>
+<nav id="nav-bar" flex>
+        <ul>
+          <li><a href="#appetizers"> Appetizers </a></li>
+          <li><a href="#soupsnsalads"> Soups & Salads </a></li>
+          <li><a href="#mains"> Mains</a></li>
+          <li><a href="#sides"> Sides </a></li>
+          <li><a href="#beverages"> Beverages</a></li>
+          <li><a href="#desserts"> Desserts</a></li>
+        </ul>
+    </nav>
 
 <!-- Insert Appetizers PNG Mock up Here -->
 <img id="appetizers" src="week9-01.png" alt="appetizers">

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lottery </title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <style media="screen">
+    .winningTicket::before {
+      content: "Winning Ticket";
+
+    }
+
+    .myTicket::before {
+      content: "My Ticket";
+
+    }
+
+
+
+
+    .winningTicket,
+    .myTicket {
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 50px;
+    }
+
+    .lotteryBall {
+      background-color: pink;
+      border-radius: 25px;
+
+      height: 50px;
+      width: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-weight: bold;
+
+
+    }
+
+    .match {
+      background-color: blue;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 winningTicket">
+
+        <div class="lotteryBall match">12</div>
+        <div class="lotteryBall">16</div>
+        <div class="lotteryBall">48</div>
+        <div class="lotteryBall">23</div>
+        <div class="lotteryBall">2</div>
+        <div class="lotteryBall">34</div>
+        <div class="lotteryBall">30</div>
+
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 myTicket">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 myOutput">
+
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+
+      var secretNumber = getSecretNumber();
+
+      function getRandomColor() {
+        return Math.floor(Math.random() * 255);
+      }
+
+      function getSecretNumber() {
+        return Math.floor(Math.random() * 100 + 1);
+      }
+
+      $(".buttonOne").on("click", function() {
+        secretNumber = getSecretNumber();
+        //$(".myOutput").append("the secret number is " + secretNumber + "<br>");
+      }) //end click
+
+      $(".inputOne").on("change", function() {
+
+        //cast in Number data type
+        var inputValue = Number($(this).val());
+        $(".message").hide(); //hide all the messages
+
+        if (inputValue < secretNumber) { //they guessed lower
+          $(".higher").show();
+        } else if (inputValue > secretNumber) { //they guessed higher
+          $(".lower").show();
+        } else {
+          $(".correct").show();
+          setInterval(function() {
+            $("body").css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+          }, 250);
+        }
+
+
+
+      }) //end click
+    }) //end document ready
+  </script>
+_____________________________
+    <script>
+    $(document).ready(function() {
+
+      var myArray = getRandomArray();
+      var numberOfGuesses =0;
+
+      function getRandomColor() {
+        return Math.floor(Math.random() * 255);
+      }
+
+      function getRandomArray() {
+        var tempArray = [];
+        //add a random number between 1 and 50 , 5 times
+        for (var i = 0; i < 5; i++) {
+          tempArray.push(Math.floor(Math.random()*50+1));
+        }
+        return tempArray;
+      }
+
+      $(".myOutput").append("myArray: " + myArray);
+
+      $(".buttonOne").on("click", function() {//new game
+        numberOfGuesses =0;//set guesse to 0
+        $(".myOutput").html("");//clear the output
+        myArray = getRandomArray(); //get a new array
+      }) //end click
+
+      $(".inputOne").on("change", function() {
+        //cast in Number data type
+        var inputValue = Number($(this).val());
+        var myIndex = myArray.indexOf(inputValue);
+
+        if (numberOfGuesses < 5){
+          //check
+          $(".myOutput").append("game is still on <br>");
+          if (myIndex > -1){//we found out
+            $(".myOutput").append("You did it. "+inputValue+" is at index "+myIndex);
+            setInterval(function(){
+                 $("body").css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+            },250);
+          }
+          else{
+            $(".myOutput").append("Sorry. "+inputValue+" is not in the array");
+          }
+        }
+        else{
+          $(".myOutput").append("you are out of guesses <br>");
+        }
+        numberOfGuesses++;//add 1 to the number of guesses
+        $(".myOutput").append("numberOfGuesses "+numberOfGuesses +"<br>");
+      }) //end click
+    }) //end document ready
+  </script>
+
+________________________________
+  <script>
+    //write pseudocode
+    //
+    //
+
+    var winningTicket = getRandomArray();
+    var myTicket = getRandomArray();
+    $(".myOutput").append("winningTicket " + winningTicket.join(";") + "<br>");
+    $(".myOutput").append("myTicket " + myTicket.join(";") + "<br>");
+    writeArrayToDiv(winningTicket, ".winningTicket");
+    writeArrayToDiv(myTicket, ".myTicket");
+    compareTickets();
+
+    function compareTickets() {
+
+      //go throught the winningTicket array
+      //if a value matches a data-value in myTicket then add .match class
+      for (var i = 0; i < winningTicket.length; i++) {
+        $(".myTicket").find("div[data-value='" + String(winningTicket[i]) + "']").addClass("match");
+      }
+    }
+
+    function writeArrayToDiv(arr, selector) {
+      //arr = the array
+      //selector = the class
+      var html = "";
+      for (var i = 0; i < arr.length; i++) {
+        html += "<div data-value='" + arr[i] + "' class='lotteryBall'>" + arr[i] + "</div>";
+      }
+
+      $(selector).html(html);
+    }
+
+    function sortNumber(a, b) { //sort from low to high
+      return a - b;
+    }
+
+    function getRandomArray() {
+      var tempArray = [];
+      //add a random number between 1 and 50 , 5 times
+      while (tempArray.length < 7) { //keep doing until we have 7
+        var randomNumber = Math.floor(Math.random() * 49 + 1); //get a randomNumber
+        if (tempArray.indexOf(randomNumber) === -1) { //if not in the array
+          tempArray.push(randomNumber); //add to the array
+        }
+      }
+      //sorted numbers
+      //no duplicates
+      tempArray.sort(sortNumber);
+      return tempArray;
+    }
+  </script>
+</body>
+</html>

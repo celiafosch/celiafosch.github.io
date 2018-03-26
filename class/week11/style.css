@@ -6,6 +6,16 @@ body {
   background: #eee url(https://subtlepatterns.com/patterns/extra_clean_paper.png);
   display: none;
 }
+
+.flexSpaceAround{
+
+display: flex;
+justify-content: space-around;
+align-items: center;
+
+}
+
+
 .logo {
   font-family: 'Open Sans', sans-serif;
   color: #555;
@@ -44,9 +54,28 @@ margin: 3em;
 }
 
 
-.ad{
+.ad img{
   width: 100%;
   margin-top: 3em;
   margin-bottom: 3em;
 
+}
+.selectContainer{
+width: 50%;
+margin: 0 auto;
+padding-top: 3em;
+
+}
+select{
+  width: auto;
+
+}
+
+.itemContainer{
+  width: 200px;
+}
+
+.output{
+
+  flex-wrap: wrap;
 }

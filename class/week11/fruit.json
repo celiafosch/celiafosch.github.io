@@ -1,0 +1,34 @@
+{
+  "Sheet1": {
+    "1": {
+      "itemId": 1,
+      "celFosName": "Apple",
+      "celFosPrice": 5,
+      "celFosImgUrl": "https://github.com/celiafosch/celiafosch.github.io/blob/master/class/week11/images/apple.jpg"
+    },
+    "2": {
+      "itemId": 2,
+      "celFosName": "Kiwi",
+      "celFosPrice": 2,
+      "celFosImgUrl": "https://github.com/celiafosch/celiafosch.github.io/blob/master/class/week11/images/kiwi.jpg"
+    },
+    "3": {
+      "itemId": 3,
+      "celFosName": "Pomegranate",
+      "celFosPrice": 4,
+      "celFosImgUrl": "https://github.com/celiafosch/celiafosch.github.io/blob/master/class/week11/images/pom.jpg"
+    },
+    "4": {
+      "itemId": 4,
+      "celFosName": "Strawberry",
+      "celFosPrice": 8,
+      "celFosImgUrl": "https://github.com/celiafosch/celiafosch.github.io/blob/master/class/week11/images/straw.jpg"
+    },
+    "5": {
+      "itemId": 5,
+      "celFosName": "Avocado",
+      "celFosPrice": 16,
+      "celFosImgUrl": "https://github.com/celiafosch/celiafosch.github.io/blob/master/class/week11/images/cado.jpg"
+    }
+  }
+}

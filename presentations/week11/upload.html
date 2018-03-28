@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cards Website Template</title>
+  <title>Celia's Cards</title>
   <style media="screen">
+  @import url('https://fonts.googleapis.com/css?family=Nunito|Raleway');
     .outputArray {
       display: flex;
       justify-content: space-around;
@@ -19,11 +20,56 @@
 
     .cardInfo {
       text-align: center;
+        padding: 5px;
+        font-family: 'Raleway', sans-serif;
     }
 
     .itemButton{
-      text-align: right;
-      padding: 10px;
+      text-align: center;
+      padding: 12px;
+      background-color: blue;
+  font-family: 'Raleway', sans-serif;
+    }
+    .SiteName{
+      font-size: 120px;
+      color: white;
+      font-family: 'Nunito', sans-serif;
+      text-align: center;
+    }
+
+    .height1{
+      height: 400px;
+      background-image: url(cool.jpg);
+      background-repeat: no-repeat;
+      background-size: 1300px;
+      background-position: 20% 20%;
+    }
+
+    .flexSpaceAround{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    ul li{
+      list-style: none;
+      text-transform: uppercase;
+      font-size: 20px;
+      font-family: 'Nunito', sans-serif;
+      margin-bottom: 10px;
+      margin-top: 20px;
+
+    }
+    ul li a, ul li a:hover{
+      text-decoration: none;
+      color: black;
+    }
+    .nuggets{
+      background-color: #FAE7F5;
+    }
+
+    img{
+
+     width: 200px;
     }
   </style>
 
@@ -39,14 +85,33 @@
     <![endif]-->
 </head>
 
-<body>
+<body class="nuggets">
   <div class="container">
+    <div class="row">
+      <div class="col-md-12 height1">
+        <h1 class="SiteName">places to go</h1>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="flexSpaceAround">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Lists</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+
+      </div>
+
+    </div>
+
     <div class="row">
       <div class="col-md-12 cardSection">
       </div>
-      <div class="col-md-12">
-        <div class="outputArray">
-        </div>
+      <div class="col-md-12 outputArray">
+
       </div>
     </div>
   </div>
@@ -60,26 +125,26 @@
 
       //These are your Object Arrays
       var arrayTopic = [{ //Change arrayTopic to whatever topic your group chose in class
-          "age": 1,
-          "name": "Smokey",
-          "owner": "Anderson",
-        //  "imgUrl": "http://via.placeholder.com/300x300",
+          "name": "Winnipeg",
+          "features": "literally none",
+          "weather": "cold af",
+        "imgUrl": "peg.jpg",
           "button": "More Info" //if u wish to do buttons
         },
 
         {
-          "age": 56,
-          "name": "T'Challa",
-          "owner": "Zeus",
-        //  "imgUrl": "http://via.placeholder.com/300x300",
+          "name": "Bolton",
+          "features": "i live there",
+          "weather": "rain",
+        "imgUrl": "ton.jpg",
           "button": "More Info" //if u wish to do buttons
         },
 
         {
-          "age": 7,
-          "name": "Kitty",
-          "owner": "Kevin",
-        //"imgUrl": "http://via.placeholder.com/300x300",
+          "name": "Boise",
+          "features": "potatoes",
+          "weather": "dunno",
+        "imgUrl": "boise.jpg",
           "button": "More Info" //if u wish to do buttons
         }
       ];
@@ -98,10 +163,10 @@
 
         for (var i = 0; i < arrayTopic.length; i++) { //change arrayTopic to whatever you
           html += "<div class='panel panel-default individualCard'>" +
-          //  "<div><img class='img-responsive' src='" + arrayTopic[i].imgUrl + "' /></div>" + //change the red text to the keys in your Array
+          "<div><img class='img-responsive' src='" + arrayTopic[i].imgUrl + "' /></div>" + //change the red text to the keys in your Array
             "<div class='cardInfo nameLabel'>" + arrayTopic[i].name + "</div>" + //change the red text to the keys in your Array
-            "<div class='cardInfo ageLabel'>" + arrayTopic[i].age + "</div>" + //change the red text to the keys in your Array
-            "<div class='cardInfo ownerLabel'>" + arrayTopic[i].owner + "</div>" + //change the red text to the keys in your Array
+            "<div class='cardInfo ageLabel'>" + arrayTopic[i].features + "</div>" + //change the red text to the keys in your Array
+            "<div class='cardInfo ownerLabel'>" + arrayTopic[i].weather + "</div>" + //change the red text to the keys in your Array
             "<div class='itemButton'><button type='button' class='btn btn-default'>" + arrayTopic[i].button + "</button></div>" + //Button Template
             "</div>";
         }

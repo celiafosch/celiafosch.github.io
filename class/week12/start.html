@@ -184,6 +184,8 @@ $("body").on("click",".buyButton", function(){
   var thisItem = $(this).closest(".itemContainer");
   var itemId = $(this).attr("data-id");
 
+  thisItem.find(".buttonContainer").remove();
+
   //write this item + form html
 var html = "<div data-id='"+itemId+"' class='itemContainer'>"+thisItem.html()+"</div>"+formHtml;
 
@@ -193,7 +195,10 @@ $(".output").html(html);
   return false;
 })
 
+$(".logo").on("click", function(){
+window.location.reload();
 
+})
 
 
 

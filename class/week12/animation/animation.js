@@ -157,6 +157,13 @@ var spriteImages = [{
     "width": 4800,
     "height": 200,
     "name": "cat"
+  },
+  {
+    "spriteMapUrl": "images/henry.png",
+    "numFrames": 5,
+    "width": 480,
+    "height": 480,
+    "name": "Henry"
   }
 ];
 var animations = []; //an array to hold the currently existing sprite obects
